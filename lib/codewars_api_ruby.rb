@@ -1,5 +1,8 @@
+require "codewars_api_ruby/client"
+require "codewars_api_ruby/configuration"
 require "codewars_api_ruby/version"
 
 module CodewarsApiRuby
-  # Your code goes here...
+  extend Configuration
+  extend Client
 end

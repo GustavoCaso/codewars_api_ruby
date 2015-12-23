@@ -3,7 +3,7 @@ module CodewarsApiRuby
     PUBLIC_METHODS = [:api_key]
 
     API_VERSION = 'v1'
-    DEFAULT_ENDPOINT = "https://www.codewars.com/api/v1"
+    DEFAULT_ENDPOINT = "https://www.codewars.com/api/#{API_VERSION}"
 
     API_KEY_DEFAULT = nil
 
