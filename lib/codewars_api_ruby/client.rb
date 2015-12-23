@@ -1,8 +1,10 @@
 require 'faraday'
 module CodewarsApiRuby
   module Client
+    PUBLIC_METHODS = [:get, :post]
     class ApiKeyMissingError < StandardError; end
-    [:get, :post].each do |method|
+
+    PUBLIC_METHODS.each do |method|
       define_method(method) do |path:, params:|
         fail ApiKeyMissingError.new(api_key_message) if CodewarsApiRuby.api_key.nil?
         response = request method: method, path: path, params: params
