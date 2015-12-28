@@ -10,7 +10,8 @@ describe CodewarsApiRuby::User do
      "leaderboardPosition"=>1895,
      "skills"=>[],
      "ranks"=>
-      {"overall"=>{"rank"=>-4, "name"=>"4 kyu", "color"=>"blue", "score"=>1708},
+      {
+       "overall"=>{"rank"=>-4, "name"=>"4 kyu", "color"=>"blue", "score"=>1708},
        "languages"=>
         {
           "ruby"=>{
@@ -41,9 +42,16 @@ describe CodewarsApiRuby::User do
 
   context 'build user methods and values' do
     [:username, :name, :honor, :clan,
-     :leaderboardPosition,:skills, :ranks].each do |key|
+     :leaderboard_position,:skills,
+     :overall, :languages, :total_authored,
+     :total_completed].each do |key|
       it "respond_to #{key}" do
         expect(user.respond_to?(key)).to be_truthy
+      end
+
+      it 'access all languages implemeted' do
+        user.languages.
+        expect()
       end
     end
   end
