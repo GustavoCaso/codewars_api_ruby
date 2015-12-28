@@ -48,11 +48,6 @@ describe CodewarsApiRuby::User do
       it "respond_to #{key}" do
         expect(user.respond_to?(key)).to be_truthy
       end
-
-      it 'access all languages implemeted' do
-        user.languages.
-        expect()
-      end
     end
   end
 end
