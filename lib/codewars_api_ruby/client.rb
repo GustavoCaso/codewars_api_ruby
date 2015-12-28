@@ -24,7 +24,7 @@ module CodewarsApiRuby
       conn.send(method) do |req|
         req.url File.join(path, params)
         req.headers['Authorization'] = CodewarsApiRuby.api_key
-        req.headers['Content-type'] = 'application/json'
+        req.headers['Content-type'] = 'application/json;charset=utf-8'
       end
     end
 
