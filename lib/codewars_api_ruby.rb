@@ -1,3 +1,4 @@
+require "codewars_api_ruby/attempt_solution"
 require "codewars_api_ruby/next_kata"
 require "codewars_api_ruby/user"
 require "codewars_api_ruby/client"
@@ -22,5 +23,14 @@ module CodewarsApiRuby
     fail InvalidLanguageSelection unless VALID_LANGUAGES.include?(language)
     status, response = post(path: NextKata::PATH, params: [language.to_s, 'train'])
     NextKata.new(data: response)
+  end
+
+  def self.attemp_solution(kata:, code:)
+    status, response = post(path: NextKata::PATH,
+      params: ['projects', kata.project_id, 'solutions', kata.solution_id, 'attempt'],
+      body: code
+    )
+    binding.pry
+    AttemptSolution.new(data: response)
   end
 end
