@@ -1,8 +1,9 @@
 require 'codewars_api_ruby/object_builder'
 
 module CodewarsApiRuby
-  class AttemptSolution
+  class DeferredResponse
     include ObjectBuilder
+    PATH = 'deferred'
 
     def initialize(data:)
       _build_object(data)
