@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.codewars.com/api/v1/code-challenges/projects/5682b13f3e087c2eb6000030/solutions/5682b13f3e087c2eb6000032/attempt
+    body:
+      encoding: UTF-8
+      string: code=def+justify%28text%2C+width%29%0Aend%0A
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"fc3afea2a900a835ef31a06ac7cb4afe"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - acfa5fda-a42b-4d4c-a575-5e4dcace3f67
+      X-Runtime:
+      - '0.162167'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 15:49:21 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"dmid":"PwF9ApbY"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 15:49:21 GMT
+recorded_with: VCR 2.9.3

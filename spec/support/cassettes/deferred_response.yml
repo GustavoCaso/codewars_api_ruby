@@ -1,0 +1,542 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 7dc373c4-91dc-455e-bc23-673dd3203127
+      X-Runtime:
+      - '0.305298'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:43:10 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:43:10 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 956a0832-0bbc-448c-ba1d-00bb30d47672
+      X-Runtime:
+      - '0.120673'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:43:11 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:43:11 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - b59c514d-2225-4f33-903d-98a773e6ccf9
+      X-Runtime:
+      - '0.032831'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:46:55 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:46:55 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 718a6a20-3bf7-4a42-be4c-40ac76f3cb5a
+      X-Runtime:
+      - '0.008980'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:46:57 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:46:57 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 177fe017-8cc9-49db-8a23-43cf12bd2869
+      X-Runtime:
+      - '0.008718'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:46:58 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:46:58 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - beacf1ab-d535-4696-b078-992097b5fd21
+      X-Runtime:
+      - '0.008618'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:00 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:00 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 5341be83-f1d6-4ca8-afbf-f2a6b1222c30
+      X-Runtime:
+      - '0.044272'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:01 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:01 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 416fc61d-553c-4378-8de9-33121558e9a0
+      X-Runtime:
+      - '0.007769'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:03 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:03 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 8e7aed54-e78c-4991-9ea7-3b2ef0982c81
+      X-Runtime:
+      - '0.006209'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:04 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:04 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 7d2610fd-cfed-4be7-a7de-7f36c7a75c5b
+      X-Runtime:
+      - '0.005735'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:06 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:06 GMT
+- request:
+    method: get
+    uri: https://www.codewars.com/api/v1/deferred/PwF9ApbY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache, private
+      X-Request-Id:
+      - 61c3f51b-5e32-49ca-a764-c9819740c39f
+      X-Runtime:
+      - '0.011486'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 30 Dec 2015 16:47:07 GMT
+      X-Rack-Cache:
+      - miss
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"reason":"not found"}'
+    http_version: 
+  recorded_at: Wed, 30 Dec 2015 16:47:07 GMT
+recorded_with: VCR 2.9.3

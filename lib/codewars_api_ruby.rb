@@ -5,9 +5,11 @@ require "codewars_api_ruby/user"
 require "codewars_api_ruby/client"
 require "codewars_api_ruby/configuration"
 require "codewars_api_ruby/version"
+require 'json'
 
 module CodewarsApiRuby
   class InvalidLanguageSelection < StandardError; end
+  class ToManyRequest < StandardError; end
   extend Configuration
   extend Client
 
@@ -36,16 +38,21 @@ module CodewarsApiRuby
     end
 
     def deferred_response(dmid:)
+      get(path: DeferredResponse::PATH, params: dmid)
+    end
+
+    def fetch_deferred_result(dmid:)
       fetching_result = true
       count = 1
       while fetching_result do
-        status, response = get(path: Deferred::PATH, params: dmid)
-        if response['success']
+        fail ToManyRequest if count > 10
+        staus , response = deferred_response(dmid: dmid)
+        result = JSON.parse(response)
+        if result['success']
           fetching_result = false
           return DeferredResponse.new(data: response)
         end
         count += 1
-        puts "Trying the fetch deferred inforamtion for #{dmid} count: #{count}"
         sleep 1
       end
     end
