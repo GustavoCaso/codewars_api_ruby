@@ -1,3 +1,4 @@
+require "codewars_api_ruby/deferred_response"
 require "codewars_api_ruby/attempt_solution"
 require "codewars_api_ruby/next_kata"
 require "codewars_api_ruby/user"

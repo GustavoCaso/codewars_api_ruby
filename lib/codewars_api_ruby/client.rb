@@ -16,7 +16,6 @@ module CodewarsApiRuby
     def conn
       Faraday.new(url: CodewarsApiRuby::Configuration::DEFAULT_ENDPOINT) do |c|
         c.request  :url_encoded
-        c.response :logger
         c.adapter  Faraday.default_adapter
       end
     end

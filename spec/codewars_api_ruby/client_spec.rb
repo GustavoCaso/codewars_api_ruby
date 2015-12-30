@@ -11,9 +11,18 @@ describe TestClass do
     end
   end
 
-  it 'fail missing api key' do
-    expect{
-      described_class.get path: 'foo', params: 'bar'
-    }.to raise_error CodewarsApiRuby::Client::ApiKeyMissingError
+  context 'Raise ApiKeyMissingError' do
+    before do
+      @old_value = CodewarsApiRuby.api_key
+      CodewarsApiRuby.api_key = nil
+    end
+    after do
+      CodewarsApiRuby.api_key = @old_value
+    end
+    it do
+      expect{
+        described_class.get path: 'foo', params: 'bar'
+      }.to raise_error CodewarsApiRuby::Client::ApiKeyMissingError
+    end
   end
 end

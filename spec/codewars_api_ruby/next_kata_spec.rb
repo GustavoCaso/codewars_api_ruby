@@ -22,17 +22,6 @@ describe CodewarsApiRuby::NextKata do
      }
   end
 
-  let(:next_kata) {described_class.new(data: next_kata_payload.to_json)}
-
-  context 'build user methods and values' do
-    [:success, :name, :slug, :href,
-     :description,:author,
-     :rank, :average_completion, :tags,
-     :project_id, :solution_id, :setup,
-     :example_fixture, :code ].each do |key|
-      it "respond_to #{key}" do
-        expect(next_kata.respond_to?(key)).to be_truthy
-      end
-    end
-  end
+  subject { described_class.new(data: next_kata_payload.to_json) }
+  it_should_behave_like 'next_kata_methods'
 end

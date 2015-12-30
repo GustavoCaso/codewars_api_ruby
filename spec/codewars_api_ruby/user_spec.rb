@@ -38,16 +38,6 @@ describe CodewarsApiRuby::User do
     }
   end
 
-  let(:user) {described_class.new(data: user_params.to_json)}
-
-  context 'build user methods and values' do
-    [:username, :name, :honor, :clan,
-     :leaderboard_position,:skills,
-     :overall, :languages, :total_authored,
-     :total_completed].each do |key|
-      it "respond_to #{key}" do
-        expect(user.respond_to?(key)).to be_truthy
-      end
-    end
-  end
+  subject {described_class.new(data: user_params.to_json)}
+  it_should_behave_like 'user_methods'
 end

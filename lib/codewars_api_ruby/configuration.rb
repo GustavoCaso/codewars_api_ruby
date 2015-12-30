@@ -9,14 +9,6 @@ module CodewarsApiRuby
 
     attr_accessor *PUBLIC_METHODS
 
-    def self.extended(base)
-      base.reset
-    end
-
-    def reset
-      self.api_key = API_KEY_DEFAULT
-    end
-
     def configure
       yield self
     end
