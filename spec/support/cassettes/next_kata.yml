@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.codewars.com/api/v1/code-challenges/ruby/train
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"54798300a77d1e64f3e421ca726aaac7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 998475c0-0909-45af-8d13-a7e03176ef3f
+      X-Runtime:
+      - '0.361667'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 29 Dec 2015 16:13:51 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":true,"name":"Text align justify","slug":"text-align-justify","href":"/kata/text-align-justify","description":"Your
+        task in this Kata is to emulate text justification in monospace font. You
+        will be given a single-lined text and the expected justification width. The
+        longest word will never be greater than this width.\n\nHere are the rules:\n\n  *
+        Use spaces to fill in the gaps between words.\n  * Each line should contain
+        as many words as possible.\n  * Use ''\\n'' to separate lines.\n  * Gap between
+        words can''t differ by more than one space.\n  * Lines should end with a word
+        not a space.\n  * ''\\n'' is not included in the length of a line.\n  * Large
+        gaps go first, then smaller ones: ''Lorem---ipsum---dolor--sit--amet'' (3,
+        3, 2, 2 spaces).\n  * Last line should not be justified, use only one space
+        between words.\n  * Last line should not contain ''\\n''\n  * Strings with
+        one word do not need gaps (''somelongword\\n'').\n\nExample with width=30:\n\n```\nLorem  ipsum  dolor  sit
+        amet,\nconsectetur  adipiscing  elit.\nVestibulum    sagittis   dolor\nmauris,  at  elementum  ligula\ntempor  eget.  In
+        quis rhoncus\nnunc,  at  aliquet orci. Fusce\nat   dolor   sit   amet  felis\nsuscipit   tristique.   Nam  a\nimperdiet   tellus.  Nulla  eu\nvestibulum    urna.    Vivamus\ntincidunt  suscipit  enim,
+        nec\nultrices   nisi  volutpat  ac.\nMaecenas   sit   amet  lacinia\narcu,  non
+        dictum justo. Donec\nsed  quam  vel  risus faucibus\neuismod.  Suspendisse  rhoncus\nrhoncus  felis  at  fermentum.\nDonec
+        lorem magna, ultricies a\nnunc    sit    amet,   blandit\nfringilla  nunc.
+        In vestibulum\nvelit    ac    felis   rhoncus\npellentesque. Mauris at tellus\nenim.  Aliquam
+        eleifend tempus\ndapibus. Pellentesque commodo,\nnisi    sit   amet   hendrerit\nfringilla,   ante  odio  porta\nlacus,   ut   elementum  justo\nnulla
+        et dolor.\n```\n\nAlso you can always take a look at how justification works
+        in your text editor or directly in HTML (css: text-align: justify).\n\nHave
+        fun :)\n\n","author":"","rank":-4,"averageCompletion":null,"tags":["Algorithms","Strings","Data
+        Types","Formatting","Logic"],"session":{"projectId":"5682b13f3e087c2eb6000030","solutionId":"5682b13f3e087c2eb6000032","setup":"def
+        justify(text, width)\n    #your code here\nend","exampleFixture":"#very simple
+        test, try to modify it on your own to get more complex ones\n#and test for
+        edge cases!\nTest.assert_equals(justify(''123 45 6'', 7), \"123  45\\n6\")","code":null}}'
+    http_version: 
+  recorded_at: Tue, 29 Dec 2015 16:13:51 GMT
+recorded_with: VCR 2.9.3
