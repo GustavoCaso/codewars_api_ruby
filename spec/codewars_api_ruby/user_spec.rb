@@ -38,6 +38,6 @@ describe CodewarsApiRuby::User do
     }
   end
 
-  subject {described_class.new(data: user_params.to_json)}
+  subject {described_class.new(data: JSON[user_params.to_json])}
   it_should_behave_like 'user_methods'
 end

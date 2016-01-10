@@ -50,19 +50,22 @@ describe CodewarsApiRuby do
     end
 
     context 'DeferredResponse' do
-      subject { described_class.fetch_deferred_result(dmid: attemp_solution_request.dmid) }
-      it 'should raise error if to many request are made' do
-        VCR.use_cassette 'deferred_response' do
-          described_class.deferred_response(dmid: attemp_solution_request.dmid)
-          expect{
-            subject
-          }.to raise_error CodewarsApiRuby::ToManyRequest
-        end
-      end
+      subject { described_class.deferred_response(dmid: attemp_solution_request.dmid) }
 
-      it 'should return a deferred_response object if success' do
+      it 'should return a deferred_response object' do
         VCR.use_cassette 'deferred_response_valid', erb: true do
           expect(subject).to be_a CodewarsApiRuby::DeferredResponse
+          expect(subject.success).to be_truthy
+        end
+      end
+    end
+
+    context 'Finalize' do
+      subject { described_class.finalize(kata: kata) }
+
+      it 'should return a finalize object' do
+        VCR.use_cassette('finalize') do
+          expect(subject).to be_a CodewarsApiRuby::Finalize
         end
       end
     end

@@ -22,6 +22,6 @@ describe CodewarsApiRuby::NextKata do
      }
   end
 
-  subject { described_class.new(data: next_kata_payload.to_json) }
+  subject { described_class.new(data: JSON[next_kata_payload.to_json]) }
   it_should_behave_like 'next_kata_methods'
 end

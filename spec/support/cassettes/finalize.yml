@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.codewars.com/api/v1/code-challenges/projects/5682b13f3e087c2eb6000030/solutions/5682b13f3e087c2eb6000032/finalize
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - MudsXKs87VGHwLiAgzsk
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"0dc9d32bd3f9b9a9e9e28d352d174d15"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 68962e23-a478-4620-8c66-87494852aa0c
+      X-Runtime:
+      - '0.046642'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 10 Jan 2016 23:31:47 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"message":"Finalized Finalized cannot be true unless
+        completed_at is set, Finalized Finalized cannot be true unless code is set","errors":[{"reason":"Finalized
+        Finalized cannot be true unless completed_at is set, Finalized Finalized cannot
+        be true unless code is set","fields":["finalized"]},{"reason":"Finalized Finalized
+        cannot be true unless code is set","fields":["finalized"]}],"error":422}'
+    http_version:
+  recorded_at: Sun, 10 Jan 2016 23:31:47 GMT
+recorded_with: VCR 2.9.3
