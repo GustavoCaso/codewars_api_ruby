@@ -1,10 +1,7 @@
-require 'json'
-
 module CodewarsApiRuby
   module ObjectBuilder
     def _build_object(data)
-      json_data = JSON.parse(data)
-      json_data.each do |key, value|
+      data.each do |key, value|
         if value.is_a? Hash
           _build_methods(value)
         else
