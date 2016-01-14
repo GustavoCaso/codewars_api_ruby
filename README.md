@@ -1,9 +1,6 @@
 # CodewarsApiRuby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/codewars_api_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+Simple Wrapper for the [Codewars]() site, where you can improve your coding skills by completing Katas.
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -19,6 +16,58 @@ And then execute:
 Or install it yourself as:
 
     $ gem install codewars_api_ruby
+    
+## Configuration
+To use this gem you have to have an account with [Codewars]().
+Then get the Api key from the profile settings and added to the gem.
+There are to ways of configuration.
+
+1- Block
+
+```ruby
+  CodewarsApiRuby.configure do |config|
+	config.api_key = API_KEY
+  end
+```
+
+2- Inline
+
+`CodewarApiRuby.api_key = API_KEY`
+
+## Endpoints
+
+### User
+
+`CodewarsApiRuby.user(username_or_id: USERNAME_OR_ID)`
+
+It will return a `CodewarsApiRuby::User` object with all the information of the user.
+
+### Next Kata
+
+`CodewarsApiRuby.next_kata(language: LANGUAGE)`
+
+#### Valid languages
+
+```
+clojure
+coffescript
+c
+haskell
+java
+javascript
+pythom
+ruby
+```
+
+It will return a `CodewarsApiRuby::NextKata` object with all the information of the user and start a new training session for the kata.
+
+### Attemp Solution
+
+`CodewarsApiRuby.attempt_solution(kata: NEXT_KATA_OBJECT , code: YOUR_CODE)`
+
+Will return 
+
+    
 
 ## Usage
 
