@@ -24,7 +24,7 @@ module CodewarsApiRuby
     end
 
     def next_kata(language:)
-      #fail InvalidLanguageSelection unless VALID_LANGUAGES.include?(language)
+      fail InvalidLanguageSelection unless VALID_LANGUAGES.include?(language.to_sym)
       status, response = post(path: NextKata::PATH, params: [language.to_s, 'train'])
       NextKata.new(data: _parse_response(status, response))
     end
