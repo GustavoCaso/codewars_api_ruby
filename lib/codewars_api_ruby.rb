@@ -14,7 +14,7 @@ module CodewarsApiRuby
   extend Client
 
   VALID_LANGUAGES = [
-    :clojure, :coffescript, :c, :haskell, :java, :javascript, :pythom, :ruby
+    :clojure, :coffescript, :c, :haskell, :java, :javascript, :python, :ruby
   ]
 
   class << self

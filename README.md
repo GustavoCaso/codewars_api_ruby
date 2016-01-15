@@ -115,7 +115,7 @@ c
 haskell
 java
 javascript
-pythom
+python
 ruby
 ```
 
