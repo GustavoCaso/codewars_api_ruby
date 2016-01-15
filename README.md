@@ -204,7 +204,32 @@ This endpoint is used to finalize the previously submitted solution. This endpoi
 
 ## Practical Example
 
-TODO: Write usage instructions here
+```ruby
+CodewarsApiRuby.api_key = 'fake_api_key'
+	
+def client 
+  CodewarsApiRuby
+end
+	
+kata = client.next_kata(language: :ruby)
+	
+# Read the kata information and complete it with some code !!!
+	
+code = File.read('./solution.rb')
+	
+attempt_solution = client.attempt_solution(kata: kata, code: code)
+	
+10.times do 
+  deferred_response = client.deferred_response(dmid: attempt_solution.dmid)
+  break if deferred_response.success
+end
+	
+if deferred_response.valid
+  client.finalize_solution(kata: kata)
+else
+  warn deferred_response.reason
+end
+```
 
 ## Development
 
@@ -218,7 +243,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/codewars_api_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/GustavoCaso/codewars_api_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
