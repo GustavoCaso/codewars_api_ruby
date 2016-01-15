@@ -1,7 +1,12 @@
 #!/usr/bin/env ruby
-
+require 'yaml'
 require "bundler/setup"
 require "codewars_api_ruby"
+
+config_file = YAML.load(File.read(File.expand_path('../../config/secrets.yml', __FILE__)))
+CodewarsApiRuby.configure do |config|
+  config.api_key = config_file['api_key']
+end
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
