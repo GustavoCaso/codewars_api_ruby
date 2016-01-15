@@ -1,6 +1,6 @@
 # CodewarsApiRuby
 
-Simple Wrapper for the [Codewars]() site, where you can improve your coding skills by completing Katas.
+Simple Wrapper for the [Codewars](http://www.codewars.com/) site, where you can improve your coding skills by completing Katas.
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,8 +18,10 @@ Or install it yourself as:
     $ gem install codewars_api_ruby
     
 ## Configuration
-To use this gem you have to have an account with [Codewars]().
+To use this gem you have to have an account with [Codewars](http://www.codewars.com/).
+
 Then get the Api key from the profile settings and added to the gem.
+
 There are to ways of configuration.
 
 1- Block
@@ -32,19 +34,77 @@ There are to ways of configuration.
 
 2- Inline
 
-`CodewarApiRuby.api_key = API_KEY`
+```ruby
+CodewarApiRuby.api_key = API_KEY
+```
 
 ## Endpoints
 
 ### User
 
-`CodewarsApiRuby.user(username_or_id: USERNAME_OR_ID)`
+```ruby
+CodewarsApiRuby.user(username_or_id: USERNAME_OR_ID)
+```
 
 It will return a `CodewarsApiRuby::User` object with all the information of the user.
 
+```json
+{
+    "username": "some_user",
+    "name": "Some Person",
+    "honor": 544,
+    "clan": "some clan",
+    "leaderboardPosition": 134,
+    "skills": [
+        "ruby",
+        "c#",
+        ".net",
+        "javascript",
+        "coffeescript",
+        "nodejs",
+        "rails"
+    ],
+    "ranks": {
+        "overall": {
+            "rank": -3,
+            "name": "3 kyu",
+            "color": "blue",
+            "score": 2116
+        },
+        "languages": {
+            "javascript": {
+                "rank": -3,
+                "name": "3 kyu",
+                "color": "blue",
+                "score": 1819
+            },
+            "ruby": {
+                "rank": -4,
+                "name": "4 kyu",
+                "color": "blue",
+                "score": 1005
+            },
+            "coffeescript": {
+                "rank": -4,
+                "name": "4 kyu",
+                "color": "blue",
+                "score": 870
+            }
+        }
+    },
+    "codeChallenges": {
+        "totalAuthored": 3,
+        "totalCompleted": 230
+    }
+}
+
+```
+
 ### Next Kata
 
-`CodewarsApiRuby.next_kata(language: LANGUAGE)`
+```ruby
+CodewarsApiRuby.next_kata(language: LANGUAGE)
+```
 
 #### Valid languages
 
@@ -59,23 +119,100 @@ pythom
 ruby
 ```
 
-It will return a `CodewarsApiRuby::NextKata` object with all the information of the user and start a new training session for the kata.
+It accept language as `symbol` and `string`
+
+It will return a `CodewarsApiRuby::NextKata` object with all the information of the kata and start a new training session.
+
+```json
+{
+   "success":true,
+   "name":"Anything to integer",
+   "slug":"anything-to-integer",
+   "description":"Your task is to program a function which converts any input to an integer.\n\nDo not perform rounding, the fractional part should simply be discarded.\n\nIf converting the input to an integer does not make sense (with an object, for instance), the function should return 0 (zero).\n\nAlso, Math.floor(), parseInt() and parseFloat() are disabled for your unconvenience.\n\nOnegaishimasu!",
+   "author":"Jake Hoffner",
+   "rank":-6,
+   "averageCompletion":125.4,
+   "tags":[
+      "Fundamentals",
+      "Integers",
+      "Data Types",
+      "Numbers"
+   ],
+   "session":{
+       "projectId":"523f66fba0de5d94410001cb",
+       "solutionId":"53bc968d35fd2feefd000013",
+       "setup":"function toInteger(n) {\n  \n}",
+       "exampleFixture":"Test.expect(toInteger(\"4.55\") === 4)",
+       "code":null
+   }
+}
+```
 
 ### Attemp Solution
 
-`CodewarsApiRuby.attempt_solution(kata: NEXT_KATA_OBJECT , code: YOUR_CODE)`
+```ruby
+CodewarsApiRuby.attempt_solution(kata: NEXT_KATA_OBJECT , code: YOUR_CODE)
+```
 
-Will return 
+The `NEXT_KATA_OBJECT` could be any kind of object at least it has te respond to `solution_id` and `project_id` and return valid data related with the kata.
 
-    
+Will submit a solution to be validated, this will return a deferred message id (dmid) which will be use to poll for the response.
 
-## Usage
+```json
+{
+   "success":true,
+   "dmid":"4rsdaDf8d"
+}
+```  
+
+### Deferred Response
+
+```ruby
+CodewarsApiRuby.deferred_response(dmid: DMID)
+```
+
+This is use for polling the response from the server. It will return a `CodewarsApiRuby::DeferredResponse` object with al the information.
+
+```json
+{
+   "success":true,
+   "dmid":"4rsdaDf8d",
+   "valid": false,
+   "reason":"-e: Value is not what was expected (Test::Error)\n",
+   "output":[
+      "<div class='console-failed'>Value is not what was expected</div>"
+   ],
+   "wall_time":45
+}
+```
+
+### Finalize Solution
+
+```ruby
+CodewarsApiRuby.finalize(kata: NEXT_KATA_OBJECT)
+```
+
+The `NEXT_KATA_OBJECT` could be any kind of object at least it has te respond to `solution_id` and `project_id` and return valid data related with the kata.
+
+This endpoint is used to finalize the previously submitted solution. This endpoint will only return a success message if there has been a previously successful solution.
+
+```json
+{
+   "success":true
+}
+```
+
+## Practical Example
 
 TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. 
+
+To been able to run the test or to use the api with the interactive prompt you will have to create a `secrest.yml` file inside the `config` folder and store a valid api_key. `api_key: VALID_API_KEY`
+
+Then, run `rake spec` to run the tests. Run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
