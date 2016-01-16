@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 require 'yaml'
 require "bundler/setup"
-require "codewars_api_ruby"
+require "codewars_client"
 
 config_file = YAML.load(File.read(File.expand_path('../../config/secrets.yml', __FILE__)))
-CodewarsApiRuby.configure do |config|
+CodewarsClient.configure do |config|
   config.api_key = config_file['api_key']
 end
 

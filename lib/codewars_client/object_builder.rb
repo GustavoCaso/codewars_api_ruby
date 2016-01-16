@@ -1,4 +1,4 @@
-module CodewarsApiRuby
+module CodewarsClient
   module ObjectBuilder
     def _build_object(data)
       data.each do |key, value|

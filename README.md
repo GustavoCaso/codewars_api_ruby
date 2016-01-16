@@ -1,4 +1,4 @@
-# CodewarsApiRuby
+# CodewarsClient
 
 Simple Wrapper for the [Codewars](http://www.codewars.com/) site, where you can improve your coding skills by completing Katas.
 ## Installation
@@ -6,7 +6,7 @@ Simple Wrapper for the [Codewars](http://www.codewars.com/) site, where you can 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'codewars_api_ruby'
+gem 'codewars_client'
 ```
 
 And then execute:
@@ -15,8 +15,8 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install codewars_api_ruby
-    
+    $ gem install codewars_client
+
 ## Configuration
 To use this gem you have to have an account with [Codewars](http://www.codewars.com/).
 
@@ -27,15 +27,15 @@ There are to ways of configuration.
 1- Block
 
 ```ruby
-  CodewarsApiRuby.configure do |config|
-	config.api_key = API_KEY
+  CodewarsClient.configure do |config|
+	  config.api_key = API_KEY
   end
 ```
 
 2- Inline
 
 ```ruby
-CodewarApiRuby.api_key = API_KEY
+CodewarsClient.api_key = API_KEY
 ```
 
 ## Endpoints
@@ -43,10 +43,10 @@ CodewarApiRuby.api_key = API_KEY
 ### User
 
 ```ruby
-CodewarsApiRuby.user(username_or_id: USERNAME_OR_ID)
+CodewarsClient.user(username_or_id: USERNAME_OR_ID)
 ```
 
-It will return a `CodewarsApiRuby::User` object with all the information of the user.
+It will return a `CodewarsClient::User` object with all the information of the user.
 
 ```json
 {
@@ -103,7 +103,7 @@ It will return a `CodewarsApiRuby::User` object with all the information of the 
 ### Next Kata
 
 ```ruby
-CodewarsApiRuby.next_kata(language: LANGUAGE)
+CodewarsClient.next_kata(language: LANGUAGE)
 ```
 
 #### Valid languages
@@ -121,7 +121,7 @@ ruby
 
 It accept language as `symbol` and `string`
 
-It will return a `CodewarsApiRuby::NextKata` object with all the information of the kata and start a new training session.
+It will return a `CodewarsClient::NextKata` object with all the information of the kata and start a new training session.
 
 ```json
 {
@@ -151,7 +151,7 @@ It will return a `CodewarsApiRuby::NextKata` object with all the information of 
 ### Attemp Solution
 
 ```ruby
-CodewarsApiRuby.attempt_solution(kata: NEXT_KATA_OBJECT , code: YOUR_CODE)
+CodewarsClient.attempt_solution(kata: NEXT_KATA_OBJECT , code: YOUR_CODE)
 ```
 
 The `NEXT_KATA_OBJECT` could be any kind of object at least it has te respond to `solution_id` and `project_id` and return valid data related with the kata.
@@ -163,15 +163,15 @@ Will submit a solution to be validated, this will return a deferred message id (
    "success":true,
    "dmid":"4rsdaDf8d"
 }
-```  
+```
 
 ### Deferred Response
 
 ```ruby
-CodewarsApiRuby.deferred_response(dmid: DMID)
+CodewarsClient.deferred_response(dmid: DMID)
 ```
 
-This is use for polling the response from the server. It will return a `CodewarsApiRuby::DeferredResponse` object with al the information.
+This is use for polling the response from the server. It will return a `CodewarsClient::DeferredResponse` object with al the information.
 
 ```json
 {
@@ -189,7 +189,7 @@ This is use for polling the response from the server. It will return a `Codewars
 ### Finalize Solution
 
 ```ruby
-CodewarsApiRuby.finalize(kata: NEXT_KATA_OBJECT)
+CodewarsClient.finalize(kata: NEXT_KATA_OBJECT)
 ```
 
 The `NEXT_KATA_OBJECT` could be any kind of object at least it has te respond to `solution_id` and `project_id` and return valid data related with the kata.
@@ -205,25 +205,25 @@ This endpoint is used to finalize the previously submitted solution. This endpoi
 ## Practical Example
 
 ```ruby
-CodewarsApiRuby.api_key = 'fake_api_key'
-	
-def client 
-  CodewarsApiRuby
+CodewarsClient.api_key = 'fake_api_key'
+
+def client
+  CodewarsClient
 end
-	
+
 kata = client.next_kata(language: :ruby)
-	
+
 # Read the kata information and complete it with some code !!!
-	
+
 code = File.read('./solution.rb')
-	
+
 attempt_solution = client.attempt_solution(kata: kata, code: code)
-	
-10.times do 
+
+10.times do
   deferred_response = client.deferred_response(dmid: attempt_solution.dmid)
   break if deferred_response.success
 end
-	
+
 if deferred_response.valid
   client.finalize_solution(kata: kata)
 else
@@ -233,7 +233,7 @@ end
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. 
+After checking out the repo, run `bin/setup` to install dependencies.
 
 To been able to run the test or to use the api with the interactive prompt you will have to create a `secrest.yml` file inside the `config` folder and store a valid api_key. `api_key: VALID_API_KEY`
 
@@ -243,7 +243,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/GustavoCaso/codewars_api_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/GustavoCaso/codewars_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

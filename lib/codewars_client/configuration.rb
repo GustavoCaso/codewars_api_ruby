@@ -1,4 +1,4 @@
-module CodewarsApiRuby
+module CodewarsClient
   module Configuration
     PUBLIC_METHODS = [:api_key]
 

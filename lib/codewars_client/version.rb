@@ -1,3 +1,3 @@
-module CodewarsApiRuby
+module CodewarsClient
   VERSION = "0.1.0"
 end

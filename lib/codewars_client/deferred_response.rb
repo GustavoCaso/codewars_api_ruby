@@ -1,6 +1,6 @@
-require 'codewars_api_ruby/object_builder'
+require 'codewars_client/object_builder'
 
-module CodewarsApiRuby
+module CodewarsClient
   class DeferredResponse
     include ObjectBuilder
     PATH = 'deferred'

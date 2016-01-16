@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'codewars_api_ruby/version'
+require 'codewars_client/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "codewars_api_ruby"
-  spec.version       = CodewarsApiRuby::VERSION
+  spec.name          = "codewars_client"
+  spec.version       = CodewarsClient::VERSION
   spec.authors       = ["GustavoCaso"]
   spec.email         = ["gustavocaso@gmail.com"]
 
   spec.summary       = %q{Codewars API Wrapper made with ruby}
   spec.description   = %q{Codewars API Wrapper made with ruby}
-  spec.homepage      = "https://github.com/GustavoCaso/codewars_api_ruby"
+  spec.homepage      = "https://github.com/GustavoCaso/codewars_client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

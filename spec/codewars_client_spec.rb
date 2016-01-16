@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CodewarsApiRuby do
+describe CodewarsClient do
 
   let :next_kata_request do
     VCR.use_cassette 'next_kata' do
@@ -16,7 +16,7 @@ describe CodewarsApiRuby do
     end
     subject { user_request }
     it 'will return a user object' do
-      expect(subject).to be_a CodewarsApiRuby::User
+      expect(subject).to be_a CodewarsClient::User
     end
 
     it_should_behave_like 'user_methods'
@@ -25,7 +25,7 @@ describe CodewarsApiRuby do
   context 'NextKata' do
     subject { next_kata_request }
     it 'will return a next_kata object' do
-      expect(next_kata_request).to be_a CodewarsApiRuby::NextKata
+      expect(next_kata_request).to be_a CodewarsClient::NextKata
     end
 
     it_should_behave_like 'next_kata_methods'
@@ -46,7 +46,7 @@ describe CodewarsApiRuby do
     end
 
     it 'should return a attemp_solution object' do
-      expect(attemp_solution_request).to be_a CodewarsApiRuby::AttemptSolution
+      expect(attemp_solution_request).to be_a CodewarsClient::AttemptSolution
     end
 
     context 'DeferredResponse' do
@@ -54,7 +54,7 @@ describe CodewarsApiRuby do
 
       it 'should return a deferred_response object' do
         VCR.use_cassette 'deferred_response_valid', erb: true do
-          expect(subject).to be_a CodewarsApiRuby::DeferredResponse
+          expect(subject).to be_a CodewarsClient::DeferredResponse
           expect(subject.success).to be_truthy
         end
       end
@@ -65,7 +65,7 @@ describe CodewarsApiRuby do
 
       it 'should return a finalize object' do
         VCR.use_cassette('finalize') do
-          expect(subject).to be_a CodewarsApiRuby::Finalize
+          expect(subject).to be_a CodewarsClient::Finalize
         end
       end
     end

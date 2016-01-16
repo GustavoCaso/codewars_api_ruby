@@ -1,14 +1,14 @@
-require "codewars_api_ruby/finalize"
-require "codewars_api_ruby/deferred_response"
-require "codewars_api_ruby/attempt_solution"
-require "codewars_api_ruby/next_kata"
-require "codewars_api_ruby/user"
-require "codewars_api_ruby/client"
-require "codewars_api_ruby/configuration"
-require "codewars_api_ruby/version"
+require "codewars_client/finalize"
+require "codewars_client/deferred_response"
+require "codewars_client/attempt_solution"
+require "codewars_client/next_kata"
+require "codewars_client/user"
+require "codewars_client/client"
+require "codewars_client/configuration"
+require "codewars_client/version"
 require 'json'
 
-module CodewarsApiRuby
+module CodewarsClient
   class InvalidLanguageSelection < StandardError; end
   extend Configuration
   extend Client

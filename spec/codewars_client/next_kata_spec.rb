@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CodewarsApiRuby::NextKata do
+describe CodewarsClient::NextKata do
   let(:next_kata_payload) do
     {
      "success"=>true,

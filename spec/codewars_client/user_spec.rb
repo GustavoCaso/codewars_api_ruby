@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CodewarsApiRuby::User do
+describe CodewarsClient::User do
   let(:user_params) do
     {
      "username"=>"GustavoCaso",
