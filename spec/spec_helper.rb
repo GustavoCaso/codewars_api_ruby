@@ -5,9 +5,16 @@ require 'pry'
 # Setup shared_examples
 Dir["./spec/support/shared_examples/**/*.rb"].each { |f| require f }
 # Setup Codewars
-config_file = YAML.load(File.read(File.expand_path('../../config/secrets.yml', __FILE__)))
+config_file = File.expand_path('../../config/secrets.yml', __FILE__)
+configuration = if File.exist?(config_file)
+                  YAML.load(File.read(config_file))
+                else
+                  # This condition is just for Travis
+                  {'api_key' => ENV['API_KEY']}
+                end
+
 CodewarsClient.configure do |config|
-  config.api_key = config_file['api_key']
+  config.api_key = configuration['api_key']
 end
 
 # Setup for test requests
