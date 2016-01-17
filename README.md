@@ -1,3 +1,4 @@
+![Travis Master](https://travis-ci.org/GustavoCaso/codewars_client.svg?branch=master)
 # CodewarsClient
 
 Simple Wrapper for the [Codewars](http://www.codewars.com/) site, where you can improve your coding skills by completing Katas.
